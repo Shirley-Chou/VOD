@@ -39,14 +39,14 @@
                 </form>
             </div>
             <div class="header-right fr">
-                <div class="rbs rbloginb fl">
+                <div class="rbs rbloginb fl" id="headerLoginbtn">
                     <div class="rbicon" data-pop="login">
                         <div class="rblogin rbiconpic"></div>
                         <div class="rbtext">登录</div>
                     </div>
                     <div class="rbsub hide"></div>
                 </div>
-                <div class="rbs rbregb fl">
+                <div class="rbs rbregb fl" id="headerRegisterbtn">
                     <div class="rbicon" data-pop="register">
                         <div class="rbreg rbiconpic"></div>
                         <div class="rbtext">注册</div>
@@ -808,7 +808,7 @@
     </div>
     <!--右侧浮动栏 end-->
     <!--弹出层 being-->
-    <div class="vodpop">
+    <div class="vodpop" style="display: block;">
         <div class="popbg"></div>
         <div class="vodpop-container lrpop">
             <div class="vodpop-main lrpop-main">
@@ -820,33 +820,39 @@
                         <span class="fl">立即注册</span>
                     </div>
                     <div class="lrpop-tabmain">
-                        <form class="lrpop-form loginpop-form">
-                            <input type="text" placeholder="请输入你的账号" class="lrpop-input lrpop-account" />
-                            <input type="password" placeholder="请输入你的密码" class="lrpop-input lrpop-password" />
+                        <form class="lrpop-form loginpop-form" style="display: block;">
+                            <label class="lrpop-input">
+                                <input type="text" placeholder="请输入你的账号" class="lrpop-account" />
+                            </label>
+                            <label class="lrpop-input">
+                                <input type="password" placeholder="请输入你的密码" class="lrpop-password" />
+                            </label>
                             <div class="clearfix">
-                                <label name="remember" class="lrpop-remember-check fl clearfix">
-                                    <span class="lrpop-remember-checkbox lrpop-remember-checked">
-                                        <input type="checkbox" checked="checked">
-                                    </span>
+                                <label name="remember" class="loginpop-remember-check fl clearfix">
+                                    <span class="loginpop-remember-checkbox loginpop-remember-checked"></span>
+                                    <input type="checkbox" id="pop-remember" checked="checked">
                                     <span>记住我</span>
                                 </label>
                                 <a href="" class="loginpop-fogetpwd fl">忘记密码？</a>
                             </div>
                             <input type="button" class="lrpop-btn loginpop-btn" value="登录" />
                         </form>
-                        <form class="lrpop-form registerpop-form" style="display: block">
-                            <input type="text" placeholder="请输入你的账号" class="lrpop-input lrpop-account" />
-                            <input type="password" placeholder="请输入你的密码" class="lrpop-input lrpop-password" />
-                            <div class="clearfix">
-                                <label name="remember" class="lrpop-remember-check fl clearfix">
-                                    <span class="lrpop-remember-checkbox lrpop-remember-checked">
-                                        <input type="checkbox" checked="checked">
-                                    </span>
-                                    <span>记住我</span>
-                                </label>
-                                <a href="" class="loginpop-fogetpwd fl">忘记密码？</a>
-                            </div>
-                            <input type="button" class="lrpop-btn loginpop-btn" value="登录" />
+                        <form class="lrpop-form registerpop-form">
+                            <label class="lrpop-input">
+                                <input type="text" placeholder="请输入你的账号" class="lrpop-account" />
+                            </label>
+                            <label class="lrpop-input">
+                                <input type="password" placeholder="请输入你的密码" class="lrpop-password" />
+                            </label>
+                            <label class="lrpop-input clearfix">
+                                <input type="password" placeholder="请输入你的密码" class="lrpop-phone fl" />
+                                <span class="registerpop-yzmbtn fl">验证码</span>
+                            </label>
+                            <label class="lrpop-input">
+                                <input type="password" placeholder="请输入你的密码" class="lrpop-yzm" />
+                            </label>
+                            <input type="button" class="lrpop-btn registerpop-btn" value="立即注册" />
+                            <p>通过注册，即表示您同意我们的<a href="">条款和条件</a></p>
                         </form>
                     </div>
                 </div>
@@ -854,5 +860,6 @@
         </div>
     </div>
     <!--弹出层 end-->
+    <script src="../js/jquery.main.js"></script>
 </body>
 </html>

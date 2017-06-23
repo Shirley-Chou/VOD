@@ -337,7 +337,7 @@ html, body {
     top: 0;
     left: 0;
     z-index: 999;
-    display: block;
+    display: none;
 }
 .vodpop .popbg {
     position: absolute;
@@ -410,22 +410,34 @@ html, body {
     font-weight: bold;
     border-bottom: 2px solid #fff;
 }
-.lrpop-tabmain .lrpop-form{
+.lrpop-tabmain .lrpop-form {
     display: none;
 }
 .lrpop-form .lrpop-input {
     display: block;
-    width: 232px;
-    height: 37px;
-    padding-left: 36px;
+    width: 270px;
+    height: 39px;
     font-size: 14px;
-    line-height: 37px;
+    background: url(../images/lrpop_inputbg.png) no-repeat;
+}
+.lrpop-input input {
+    width: 270px;
+    height: 37px;
+    padding: 1px 0;
     color: #7e83a6;
-    background-color: #fff;
-    filter: alpha(opacity=80);
-    -moz-opacity: 0.8;
-    opacity: 0.8;
-    border: 1px solid #fff;
+    text-indent: 36px;
+}
+.lrpop-input input::-webkit-input-placeholder {
+    color: #7e83a6;
+}
+.lrpop-input input:-moz-placeholder {
+    color: #7e83a6
+}
+.lrpop-input input::-moz-placeholder {
+    color: #7e83a6;
+}
+.lrpop-input input:-ms-input-placeholder {
+    color: #7e83a6;
 }
 .lrpop-account {
     background: url(../images/logrepop_account.png) no-repeat 11px center;
@@ -433,7 +445,7 @@ html, body {
 .lrpop-password {
     background: url(../images/logrepop_password.png) no-repeat 11px center;
 }
-.lrpop-remember-check span {
+.loginpop-remember-check span {
     display: block;
     height: 16px;
     margin-right: 7px;
@@ -441,15 +453,22 @@ html, body {
     color: #fff;
     float: left;
 }
-.lrpop-remember-check .lrpop-remember-checkbox {
-    width: 16px;
-    border: 1px solid #fff;
+.loginpop-remember-check{
+    display: block;
+    position: relative;
     cursor: pointer;
 }
-.lrpop-remember-check .lrpop-remember-checked {
+.loginpop-remember-check .loginpop-remember-checkbox {
+    width: 16px;
+    border: 1px solid #fff;
+}
+.loginpop-remember-check .loginpop-remember-checked {
     background: url(../images/checked_bg.png) no-repeat left center;
 }
-.lrpop-remember-checkbox input[type=checkbox] {
+.loginpop-remember-check input[type=checkbox] {
+    position: absolute;
+    left: 0;
+    top: 0;
     visibility: hidden;
 }
 .loginpop-form .loginpop-fogetpwd {
@@ -471,11 +490,35 @@ html, body {
 .loginpop-form .lrpop-input {
     margin-bottom: 27px;
 }
-.loginpop-form .lrpop-btn{
+.loginpop-form .lrpop-btn {
     margin-top: 27px;
 }
-.registerpop-form .lrpop-input{
+.registerpop-form .lrpop-input {
     margin-bottom: 15px;
+}
+.lrpop-input input.lrpop-phone{
+    width: 188px;
+    background: url(../images/logrepop_phone.png) no-repeat 11px center;
+}
+.registerpop-form .registerpop-yzmbtn{
+    display: block;
+    width: 82px;
+    height: 39px;
+    text-align: center;
+    line-height: 39px;
+    background-color: #fcdd32;
+    cursor: pointer;
+}
+.lrpop-yzm{
+    background: url(../images/logrepop_yzm.png) no-repeat 11px center;
+}
+.registerpop-form p{
+    margin-top: 15px;
+    font-size: 14px;
+    color: #fff;
+}
+.registerpop-form p a{
+    color: #ff0000;
 }
 /*弹出层 end*/
 /*****************************************首页样式*****************************************/
