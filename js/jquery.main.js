@@ -36,6 +36,19 @@ function tabBar(tabEleBtn, tabClass, tabEleBtnSib, tabEle, tabEleSib){
     });
 };
 
+//播放视频
+function playVideo(){
+    var percent = $('.playvideo-viewpercent-num').html();
+    $('.playvideo-viewpercent-line').css('width', percent);
+
+    if($('#myplayer').hasClass('jw-flag-user-inactive')){
+        $('.playvideo-qxd').hide();
+    } else {
+        $('.playvideo-qxd').show();
+    }
+};
+
 $(function(){
     lrPop();
+    playVideo();
 });
