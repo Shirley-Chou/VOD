@@ -48,7 +48,25 @@ function playVideo(){
     }
 };
 
+//播放记录
+function history(){
+    $('.submain-header-check').bind('click', function(){
+        if($('#subHeardCheck').is(':checked')){
+            $(this).children('.submain-header-checkbox').addClass('submain-header-checked');
+        } else {
+            $(this).children('.submain-header-checkbox').removeClass('submain-header-checked');
+        }
+    });
+};
+
+//我的收藏
+function collect(){
+    tabBar($('.collect-tab-title span'),'collect-tab-titleactive','span',$('.collect-tab-list'),'div');
+}
+
 $(function(){
     lrPop();
     playVideo();
+    history();
+    collect();
 });

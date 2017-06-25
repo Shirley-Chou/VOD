@@ -79,7 +79,8 @@ html, body {
 }
 /*header being*/
 .header {
-    width: 80%;
+    width: 63%;
+    min-width: 722px;
     margin: 0px auto;
 }
 .header-top {
@@ -532,6 +533,240 @@ html, body {
     color: #f00;
 }
 /*弹出层 end*/
+.subcontainer {
+    width: 63%;
+    min-width: 1000px;
+    margin: 0px auto;
+    padding-top: 20px;
+}
+/*menu begin*/
+.menu {
+    width: 19.7%;
+    min-width: 197px;
+}
+.menu-usermsg {
+    width: 100%;
+    padding-top: 8.5%;
+    padding-bottom: 13.5%;
+    margin-bottom: 4px;
+    background-color: #686b8a;
+}
+.menu-usermsg .menu-userphoto {
+    position: relative;
+    width: 27.5%;
+    margin-left: 5.5%;
+    margin-right: 4px;
+}
+.menu-userphoto img {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+.menu-userphoto img.menu-userphotobg {
+    position: relative;
+}
+.menu-userinfo {
+    color: #fff;
+}
+.menu-userinfo span, .menu-userinfo a {
+    display: block;
+}
+.menu-username {
+    margin-bottom: 6px;
+    font-size: 18px;
+    overflow: hidden;
+}
+.menu-username span, .menu-username img {
+    display: block;
+    float: left;
+}
+.menu-username img {
+    margin-top: 5px;
+    margin-left: 2px;
+}
+.menu-userinfo a {
+    width: 117px;
+    height: 32px;
+    margin-top: 15px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 32px;
+    color: #fff;
+    background: url("../images/menu_vipbtn.png") no-repeat;
+}
+@media screen and (max-width: 1660px) {
+    .menu-usermsg .menu-userphoto {
+        width: 25%;
+        margin-left: 5%;
+    }
+}
+.menu-container {
+    width: 100%;
+    background-color: #232333;
+}
+.menu-container .menu-item {
+    height: 40px;
+    padding-left: 17.8%;
+    line-height: 40px;
+    font-size: 14px;
+}
+.menu-container .menu-item div {
+    padding-left: 21.7%;
+}
+.menu-item div a {
+    color: #7e83a6;
+}
+.menu-container .menu-active {
+    background-color: #686b8a;
+}
+.menu-container .menu-active a {
+    color: #fff;
+}
+.menu-history {
+    background: url("../images/menu_icon_history.png") no-repeat left center;
+}
+.menu-active .menu-history {
+    background: url("../images/menu_icon_history_active.png") no-repeat left center;
+}
+.menu-collect {
+    background: url("../images/menu_icon_collect.png") no-repeat left center;
+}
+.menu-active .menu-collect {
+    background: url("../images/menu_icon_collect_active.png") no-repeat left center;
+}
+.menu-message {
+    background: url("../images/menu_icon_message.png") no-repeat left center;
+}
+.menu-active .menu-message {
+    background: url("../images/menu_icon_message_active.png") no-repeat left center;
+}
+.menu-update {
+    background: url("../images/menu_icon_update.png") no-repeat left center;
+}
+.menu-active .menu-update {
+    background: url("../images/menu_icon_update_active.png") no-repeat left center;
+}
+.menu-video {
+    background: url("../images/menu_icon_video.png") no-repeat left center;
+}
+.menu-active .menu-video {
+    background: url("../images/menu_icon_video_active.png") no-repeat left center;
+}
+.menu-setting {
+    background: url("../images/menu_icon_setting.png") no-repeat left center;
+}
+.menu-active .menu-setting {
+    background: url("../images/menu_icon_setting_active.png") no-repeat left center;
+}
+.menu-vip {
+    background: url("../images/menu_icon_vip.png") no-repeat left center;
+}
+.menu-active .menu-vip {
+    background: url("../images/menu_icon_vip_active.png") no-repeat left center;
+}
+/*menu end*/
+.submain {
+    width: 78.9%;
+    min-width: 798px;
+    padding-bottom: 46px;
+    background-color: #232333;
+}
+.submain-header {
+    position: relative;
+    width: 100%;
+    height: 42px;
+    border-bottom: 2px solid #7e83a6;
+}
+.submain-header h2 {
+    width: 118px;
+    height: 42px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 42px;
+    color: #fff;
+    background: url("../images/submain_title.png") no-repeat;
+    float: left;
+}
+.submain-header-option {
+    margin-right: 27px;
+    padding-top: 9px;
+}
+.submain-header-deletebtn {
+    display: block;
+    width: 40px;
+    height: 24px;
+    margin-left: 17px;
+    padding-left: 24px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #7e83a6;
+    background: url("../images/submain_header_deletebtn.png") no-repeat;
+    cursor: pointer;
+}
+.submain-header-check {
+    display: block;
+    position: relative;
+    padding-top: 4px;
+    cursor: pointer;
+}
+.submain-header-check span {
+    display: block;
+    height: 16px;
+    margin-right: 7px;
+    line-height: 16px;
+    color: #7e83a6;
+    float: left;
+}
+.submain-header-check .submain-header-checkbox {
+    width: 16px;
+    border: 1px solid #7e83a6;
+}
+.submain-header-check .submain-header-checked {
+    background: url(../images/submain_header_checkedbg.png) no-repeat left center;
+}
+.submain-header-check input[type=checkbox] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    visibility: hidden;
+}
+.submain .subbox {
+    width: 90.7%;
+    min-width: 716px;
+    margin: 0 auto;
+}
+/*分页 being*/
+.vod_page {
+    width: 478px;
+    margin: 0 auto;
+}
+.vod_page ul {
+    margin-left: -8px;
+}
+.vod_pageitem {
+    width: 40px;
+    height: 32px;
+    margin-left: 8px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 32px;
+    color: #686b8a;
+    border: 1px solid #686b8a;
+    cursor: pointer;
+    float: left;
+}
+.vod_pageitem_prev, .vod_pageitem_next {
+    width: 83px;
+}
+.vod_pageitem_active {
+    color: #fff;
+    background-color: #686b8a;
+    cursor: default;
+}
+/*分页 end*/
 /*****************************************首页*****************************************/
 /*最近精选being*/
 .greatest {
@@ -771,11 +1006,6 @@ html, body {
     background: url("../images/playvideo_play.png") no-repeat;
     cursor: pointer;
 }
-.playvideo-video { }
-.playvideo-video { }
-.playvideo-video { }
-.playvideo-video { }
-.playvideo-video { }
 .playvideo-leftcon .playvideo-ad {
     position: relative;
     margin-top: 5px;
@@ -1006,4 +1236,161 @@ html, body {
     display: block;
     width: 100%;
     height: auto;
+}
+/*****************************************播放记录*****************************************/
+.historymain, .collectmain {
+    padding-top: 33px;
+}
+.historybox, .collectbox {
+    width: 100%;
+}
+.history-time {
+    width: 77px;
+    height: 32px;
+    margin-bottom: 13px;
+    padding-left: 15px;
+    background: url("../images/history_timebg.png");
+}
+.history-time span {
+    display: block;
+    height: 32px;
+    padding-left: 25px;
+    font-size: 16px;
+    line-height: 32px;
+    color: #fff;
+    background: url("../images/history_time.png") no-repeat left center;
+}
+.history-list,.collect-tab-list {
+    margin-bottom: 1.8%;
+}
+.history-list ul,.collect-tab-list ul {
+    margin-left: -3%;
+}
+.history-list .history-listitem,.collect-tab-list .collect-listitem {
+    position: relative;
+    width: 30.3%;
+    min-width: 221px;
+    margin-left: 3%;
+    margin-bottom: 3%;
+    padding-bottom: 2%;
+    background-color: #33364b;
+}
+.history-listitem .history-list-imgbox,.collect-listitem  .collect-list-imgbox{
+    display: block;
+    position: relative;
+    width: 100%;
+}
+.history-list-imgbox img,.collect-list-imgbox img {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+.history-list-imgbox img.history-list-imgbg,.collect-list-imgbox img.collect-list-imgbg {
+    position: relative;
+}
+.history-list-imgbox .history-sc {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 66px;
+    height: 28px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 28px;
+    color: #fff;
+    background-color: #f56f0f;
+}
+.history-list-txtbox,.collect-list-txtbox {
+    width: 95%;
+    margin: 0 auto;
+    padding-top: 3%;
+}
+.history-list-txtbox a,.collect-list-txtbox a {
+    display: block;
+    margin-bottom: 4%;
+    font-size: 16px;
+    color: #fff;
+}
+.history-list-txtbox .history-viewmin {
+    display: block;
+    margin-left: 8px;
+    padding-left: 21px;
+    font-size: 14px;
+    color: #7e83a6;
+    background: url("../images/history_viewmin.png") no-repeat left center;
+}
+@media screen and (max-width: 1660px) {
+    .history-list-txtbox a {
+        font-size: 14px;
+    }
+    .history-list-txtbox .history-viewmin {
+        font-size: 12px;
+    }
+}
+/*****************************************我的收藏*****************************************/
+.collect{
+    min-height: 810px;
+}
+.collect-tab-title{
+    width: 317px;
+    height: 30px;
+    margin: 0 auto;
+    margin-bottom: 23px;
+    font-size: 14px;
+    line-height: 30px;
+    color: #7e83a6;
+    border: 1px solid #7e83a6;
+    border-radius: 3px;
+}
+.collect-tab-title span{
+    display: block;
+    width: 105px;
+    text-align: center;
+    border-left: 1px solid #7e83a6;
+    float: left;
+    cursor: pointer;
+}
+.collect-tab-title span:first-child{
+    border-left: 0;
+}
+.collect-tab-titleactive{
+    color: #fff;
+    background-color: #7e83a6;
+}
+.collect-tab-list {
+    display: none;
+}
+.collect-tab-list:first-child {
+    display: block;
+}
+.collect-listitem .collect-list-tips{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 105px;
+    height: 28px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 28px;
+    color: #fff;
+    background-color: #ff0000;
+    z-index: 10;
+}
+.collect-list-txtbox a{
+    margin-bottom: 0;
+}
+.collect-tab-list .collect-listitem {
+    margin-bottom: 5%;
+    padding-bottom: 0;
+    background-color: #232333;
+}
+@media screen and (max-width: 1660px) {
+    .collect-list-txtbox a {
+        font-size: 14px;
+    }
 }
