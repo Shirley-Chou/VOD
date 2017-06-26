@@ -36,6 +36,15 @@ function tabBar(tabEleBtn, tabClass, tabEleBtnSib, tabEle, tabEleSib){
     });
 };
 
+function menu(){
+    var boxH1 = Math.round($('.submain').outerHeight()), boxH2 = Math.round($('.menu-usermsg').outerHeight() + 4), boxH = boxH1 - boxH2;
+    $('.menu-container').height(boxH);
+
+    $(window).resize(function(){
+        var boxH1 = Math.round($('.submain').outerHeight()), boxH2 = Math.round($('.menu-usermsg').outerHeight() + 4), boxH = boxH1 - boxH2;
+        $('.menu-container').height(boxH);
+    });
+}
 //播放视频
 function playVideo(){
     var percent = $('.playvideo-viewpercent-num').html();
@@ -61,12 +70,14 @@ function history(){
 
 //我的收藏
 function collect(){
-    tabBar($('.collect-tab-title span'),'collect-tab-titleactive','span',$('.collect-tab-list'),'div');
+    tabBar($('.collect-tab-title span'), 'collect-tab-titleactive', 'span', $('.collect-tab-list'), 'div');
 }
 
 $(function(){
     lrPop();
     playVideo();
+    menu();
     history();
     collect();
+
 });

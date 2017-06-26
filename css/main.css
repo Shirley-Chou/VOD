@@ -1261,13 +1261,13 @@ html, body {
     color: #fff;
     background: url("../images/history_time.png") no-repeat left center;
 }
-.history-list,.collect-tab-list {
+.history-list, .collect-tab-list {
     margin-bottom: 1.8%;
 }
-.history-list ul,.collect-tab-list ul {
+.history-list ul, .collect-tab-list ul {
     margin-left: -3%;
 }
-.history-list .history-listitem,.collect-tab-list .collect-listitem {
+.history-list .history-listitem, .collect-tab-list .collect-listitem {
     position: relative;
     width: 30.3%;
     min-width: 221px;
@@ -1276,12 +1276,12 @@ html, body {
     padding-bottom: 2%;
     background-color: #33364b;
 }
-.history-listitem .history-list-imgbox,.collect-listitem  .collect-list-imgbox{
+.history-listitem .history-list-imgbox, .collect-listitem .collect-list-imgbox {
     display: block;
     position: relative;
     width: 100%;
 }
-.history-list-imgbox img,.collect-list-imgbox img {
+.history-list-imgbox img, .collect-list-imgbox img {
     display: block;
     position: absolute;
     top: 0;
@@ -1289,7 +1289,7 @@ html, body {
     width: 100%;
     height: auto;
 }
-.history-list-imgbox img.history-list-imgbg,.collect-list-imgbox img.collect-list-imgbg {
+.history-list-imgbox img.history-list-imgbg, .collect-list-imgbox img.collect-list-imgbg {
     position: relative;
 }
 .history-list-imgbox .history-sc {
@@ -1305,12 +1305,12 @@ html, body {
     color: #fff;
     background-color: #f56f0f;
 }
-.history-list-txtbox,.collect-list-txtbox {
+.history-list-txtbox, .collect-list-txtbox {
     width: 95%;
     margin: 0 auto;
     padding-top: 3%;
 }
-.history-list-txtbox a,.collect-list-txtbox a {
+.history-list-txtbox a, .collect-list-txtbox a {
     display: block;
     margin-bottom: 4%;
     font-size: 16px;
@@ -1333,10 +1333,10 @@ html, body {
     }
 }
 /*****************************************我的收藏*****************************************/
-.collect{
+.collect {
     min-height: 810px;
 }
-.collect-tab-title{
+.collect-tab-title {
     width: 317px;
     height: 30px;
     margin: 0 auto;
@@ -1347,7 +1347,7 @@ html, body {
     border: 1px solid #7e83a6;
     border-radius: 3px;
 }
-.collect-tab-title span{
+.collect-tab-title span {
     display: block;
     width: 105px;
     text-align: center;
@@ -1355,10 +1355,10 @@ html, body {
     float: left;
     cursor: pointer;
 }
-.collect-tab-title span:first-child{
+.collect-tab-title span:first-child {
     border-left: 0;
 }
-.collect-tab-titleactive{
+.collect-tab-titleactive {
     color: #fff;
     background-color: #7e83a6;
 }
@@ -1368,7 +1368,7 @@ html, body {
 .collect-tab-list:first-child {
     display: block;
 }
-.collect-listitem .collect-list-tips{
+.collect-listitem .collect-list-tips {
     display: block;
     position: absolute;
     top: 0;
@@ -1379,10 +1379,10 @@ html, body {
     text-align: center;
     line-height: 28px;
     color: #fff;
-    background-color: #ff0000;
+    background-color: #f00;
     z-index: 10;
 }
-.collect-list-txtbox a{
+.collect-list-txtbox a {
     margin-bottom: 0;
 }
 .collect-tab-list .collect-listitem {
@@ -1396,11 +1396,28 @@ html, body {
     }
 }
 /*****************************************上传视频*****************************************/
-.updatemain{
+.updatemain {
     width: 100%;
     padding-top: 54px;
 }
-.updatebox{
-    height: 43.5%;
+.updatebox {
+    padding-top: 27.3%;
     border: 1px dashed #7e83a6;
+    border-radius: 10px;
+    background: url("../images/update_bg.png") no-repeat center 80%;
+}
+.updatebox:hover {
+    background: #33364b url("../images/update_hover_bg.png") no-repeat center 80%;
+}
+.update-btn{
+    display: block;
+    width: 109px;
+    height: 33px;
+    margin: 0 auto;
+    font-size: 14px;
+    text-align: center;
+    line-height: 33px;
+    color: #ffd800;
+    cursor: pointer;
+    background: url("../images/update_btnbg.png") no-repeat;
 }
