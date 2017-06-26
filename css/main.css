@@ -605,6 +605,7 @@ html, body {
 }
 .menu-container {
     width: 100%;
+    min-height: 280px;
     background-color: #232333;
 }
 .menu-container .menu-item {
@@ -946,7 +947,7 @@ html, body {
     margin-right: 1.5%;
 }
 .playvideo-left .playvideo-leftcon {
-    margin-top: 25px;
+    margin-top: 26px;
     padding: 0.6%;
     border: 1px solid #33364b;
 }
@@ -1137,7 +1138,7 @@ html, body {
     padding-left: 23px;
     background-image: url("../images/playvideo_down.png");
 }
-.playvideo-add {
+.playvideo-collect {
     padding-left: 25px;
     background-image: url("../images/playvideo_add.png");
 }
@@ -1393,4 +1394,13 @@ html, body {
     .collect-list-txtbox a {
         font-size: 14px;
     }
+}
+/*****************************************上传视频*****************************************/
+.updatemain{
+    width: 100%;
+    padding-top: 54px;
+}
+.updatebox{
+    height: 43.5%;
+    border: 1px dashed #7e83a6;
 }
