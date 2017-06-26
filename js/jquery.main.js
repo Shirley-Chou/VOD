@@ -1,5 +1,5 @@
 /**
- * Created by win8 on 2017/6/23.
+ * Created by Shirley on 2017/6/23.
  */
 //登录注册弹窗
 function lrPop(){
