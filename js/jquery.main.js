@@ -28,14 +28,6 @@ function lrPop(){
     });
 };
 
-function tabBar(tabEleBtn, tabClass, tabEleBtnSib, tabEle, tabEleSib){
-    tabEleBtn.bind('click', function(){
-        var i = $(this).index();
-        $(this).addClass(tabClass).siblings(tabEleBtnSib).removeClass(tabClass);
-        tabEle.eq(i).show().siblings(tabEleSib).hide();
-    });
-};
-
 function menu(){
     var boxH1 = Math.round($('.submain').outerHeight()), boxH2 = Math.round($('.menu-usermsg').outerHeight() + 4), boxH = boxH1 - boxH2;
     $('.menu-container').height(boxH);
@@ -73,11 +65,39 @@ function collect(){
     tabBar($('.collect-tab-title span'), 'collect-tab-titleactive', 'span', $('.collect-tab-list'), 'div');
 }
 
+//我的消息
+function message(){
+    $('.message-list-openbtn').bind('click', function(){
+        var read = $(this).parents('.message-list-item');
+        $(this).toggleClass('message-list-closebtn');
+        if($(this).hasClass('message-list-closebtn')){
+            $(this).html('收起');
+            $(this).parent().siblings('.message-listmain').css({'height':'auto','color':'#fff'});
+        } else {
+            $(this).html('展开');
+            $(this).parent().siblings('.message-listmain').css({'height':'50px','color':'#7e83a6'});
+        }
+        if(!read.hasClass('message-list-reade')){
+            read.addClass('message-list-reade');
+        }
+    });
+
+    tabBar($('.message-tabtitle span'),'message-tabtitle-active','span',$('.message-tablist'),'div');
+}
+
+function tabBar(tabEleBtn, tabClass, tabEleBtnSib, tabEle, tabEleSib){
+    tabEleBtn.bind('click', function(){
+        var i = $(this).index();
+        $(this).addClass(tabClass).siblings(tabEleBtnSib).removeClass(tabClass);
+        tabEle.eq(i).show().siblings(tabEleSib).hide();
+    });
+};
+
 $(function(){
     lrPop();
     playVideo();
     menu();
     history();
     collect();
-
+    message();
 });
