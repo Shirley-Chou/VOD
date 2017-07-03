@@ -1542,13 +1542,13 @@ html, body {
     }
 }
 /*****************************************我的消息*****************************************/
-.messagemain {
+.messagemain, .settingmain {
     padding-top: 26px;
 }
-.message-tab {
+.message-tab, .setting-tab {
     width: 100%;
 }
-.message-tabtitle {
+.message-tabtitle, .setting-tabtitle {
     width: 434px;
     height: 30px;
     margin: 0 auto;
@@ -1559,7 +1559,7 @@ html, body {
     border: 1px solid #7e83a6;
     border-radius: 3px;
 }
-.message-tabtitle span {
+.message-tabtitle span, .setting-tabtitle span {
     display: block;
     width: 86px;
     height: 30px;
@@ -1571,10 +1571,10 @@ html, body {
     cursor: pointer;
     float: left;
 }
-.message-tabtitle span:first-child {
+.message-tabtitle span:first-child, .setting-tabtitle span:first-child {
     border-left: 0;
 }
-.message-tabtitle span.message-tabtitle-active {
+.message-tabtitle span.message-tabtitle-active, .setting-tabtitle span.setting-tabtitle-active {
     color: #fff;
     background-color: #7e83a6;
 }
@@ -1639,4 +1639,196 @@ html, body {
     font-size: 14px;
     color: #7e83a6;
     background: url("../images/message_clock.png") no-repeat left center;
+}
+/*****************************************个人设置*****************************************/
+.settingmain{
+    padding-bottom: 300px;
+}
+.setting-tabtitle {
+    width: 173px;
+}
+.setting-tabbox {
+    padding-left: 74px;
+    padding-top: 80px;
+}
+.setting-msg {
+    width: 395px;
+    margin-right: 126px
+}
+.setting-msg li {
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+.setting-msg li .setting-msgtitle {
+    display: block;
+    width: 74px;
+    height: 38px;
+    margin-right: 7px;
+    text-align: right;
+    line-height: 38px;
+    color: #7e83a6;
+}
+.setting-msg li .setting-msgcon {
+}
+.setting-msgcon input[type=text] {
+    display: block;
+    width: 309px;
+    height: 36px;
+    text-indent: 15px;
+    color: #fff;
+    border: 1px solid #7e83a6;
+    border-radius: 5px;
+    background-color: #232333;
+}
+input::-webkit-input-placeholder {
+    color: #7e83a6;
+}
+input:-moz-placeholder {
+    color: #7e83a6;
+}
+input::-moz-placeholder {
+    color: #7e83a6;
+}
+input:-ms-input-placeholder {
+    color: #7e83a6;
+}
+.setting-msgcon .setting-sexradio {
+    position: relative;
+    height: 38px;
+    margin-left: 5px;
+    margin-right: 20px;
+    padding-left: 23px;
+    line-height: 38px;
+    background: url("../images/setting_radio.png") no-repeat left center;
+}
+.setting-msgcon .setting-sexradio-checked {
+    background: url("../images/setting_radio_checked.png") no-repeat left center;
+}
+.setting-sexradio input[type=radio] {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    visibility: hidden;
+}
+.setting-select {
+    position: relative;
+    height: 36px;
+    padding-left: 18px;
+    padding-right: 10px;
+    margin-right: 9px;
+    color: #7e83a6;
+    border: 1px solid #7e83a6;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.setting-select span {
+    padding-right: 26px;
+    line-height: 36px;
+    background: url("../images/message_open.png") no-repeat right center;
+}
+.setting-select ul {
+    position: absolute;
+    top: 38px;
+    left: 0;
+    max-height: 295px;
+    padding-top: 20px;
+    color: #7e83a6;
+    border: 1px solid #7e83a6;
+    background-color: #232333;
+    border-radius: 5px;
+    overflow-y: auto;
+    display: none;
+    z-index: 90;
+}
+.setting-select ul li {
+    cursor: pointer;
+}
+.setting-select ul li:hover {
+    color: #fff;
+}
+.setting-select ul li.setting-select-choose {
+    color: #232333;
+    background-color: #7e83a6;
+}
+.setting-birth ul {
+    width: 98px;
+    text-align: center;
+}
+.setting-work ul {
+    width: 310px;
+    padding-top: 10px;
+    text-indent: 10px;
+}
+.setting-keyword {
+    margin-top: 17px;
+}
+.setting-keyword a {
+    display: block;
+    height: 26px;
+    margin-right: 14px;
+    padding: 0 15px;
+    line-height: 26px;
+    color: #7e83a6;
+    border: 1px solid #7e83a6;
+    border-radius: 26px;
+    float: left;
+}
+.setting-photo {
+    width: 111px;
+}
+.setting-photo .setting-photobox {
+    position: relative;
+    width: 111px;
+    height: 111px;
+    margin-bottom: 19px;
+    border-radius: 100%;
+}
+.setting-photo .setting-photobg{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 111px;
+    height: 111px;
+    background: url("../images/setting_photobg.png") no-repeat;
+    z-index: 90;
+}
+.setting-photo .setting-changephoto {
+    display: block;
+    position: relative;
+    width: 88px;
+    height: 28px;
+    margin: 0 auto;
+    font-size: 14px;
+    text-align: center;
+    line-height: 28px;
+    color: #7e83a6;
+    background: url("../images/setting_chage.png") no-repeat;
+    cursor: pointer;
+}
+.setting-changephoto input[type=file] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 88px;
+    height: 28px;
+    opacity: 0;
+    cursor: pointer;
+}
+.setting-photo .setting-changephoto:hover {
+    color: #fff;
+    background: url("../images/setting_chage_hover.png") no-repeat;
+}
+.setting-save {
+    width: 129px;
+    height: 38px;
+    margin-left: 81px;
+    margin-top: 25px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 38px;
+    color: #fff;
+    border-radius: 5px;
+    background-color: rgb(255, 0, 0);
+    cursor: pointer;
 }

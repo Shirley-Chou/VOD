@@ -72,17 +72,37 @@ function message(){
         $(this).toggleClass('message-list-closebtn');
         if($(this).hasClass('message-list-closebtn')){
             $(this).html('收起');
-            $(this).parent().siblings('.message-listmain').css({'height':'auto','color':'#fff'});
+            $(this).parent().siblings('.message-listmain').css({'height' : 'auto', 'color' : '#fff'});
         } else {
             $(this).html('展开');
-            $(this).parent().siblings('.message-listmain').css({'height':'50px','color':'#7e83a6'});
+            $(this).parent().siblings('.message-listmain').css({'height' : '50px', 'color' : '#7e83a6'});
         }
         if(!read.hasClass('message-list-reade')){
             read.addClass('message-list-reade');
         }
     });
 
-    tabBar($('.message-tabtitle span'),'message-tabtitle-active','span',$('.message-tablist'),'div');
+    tabBar($('.message-tabtitle span'), 'message-tabtitle-active', 'span', $('.message-tablist'), 'div');
+}
+
+//个人设置
+function setting(){
+    $('.setting-sexradio').bind('click', function(){
+        $()
+        if($('#pop-remember').is(':checked')){
+            $(this).children('.loginpop-remember-checkbox').addClass('loginpop-remember-checked');
+        } else {
+            $(this).children('.loginpop-remember-checkbox').removeClass('loginpop-remember-checked');
+        }
+    });
+    $('.setting-select').bind('click', function(){
+        $(this).children('ul').toggle();
+    });
+    $('.setting-select ul li').bind('click',function(){
+        var val=$(this).html();
+        $(this).parent('ul').siblings('span').html(val);
+        $(this).addClass('setting-select-choose').siblings().removeClass();
+    });
 }
 
 function tabBar(tabEleBtn, tabClass, tabEleBtnSib, tabEle, tabEleSib){
@@ -100,4 +120,5 @@ $(function(){
     history();
     collect();
     message();
+    setting();
 });
