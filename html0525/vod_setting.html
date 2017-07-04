@@ -14,9 +14,10 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="../css/layui.css">
     <link rel="stylesheet" href="../css/ibanner.css">
+    <link href="http://www.jq22.com/jquery/bootstrap-3.3.4.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/main.css">
     <script src="../js/layui.js"></script>
-    <script src="../js/jquery.js"></script>
+    <script src="../js/jquery-1.11.1.min.js"></script>
     <script src="../js/jquery.lazyload.js"></script>
     <script src="../js/ad.js"></script>
     <script src="../js/ibanner.js"></script>
@@ -188,6 +189,20 @@
                                         <li class="clearfix">
                                             <span class="setting-msgtitle fl">所在地</span>
                                             <div class="setting-msgcon fl">
+                                                <div data-toggle="distpicker">
+                                                    <div class="form-group">
+                                                        <label class="sr-only" for="province2">Province</label>
+                                                        <select class="form-control" id="province2" data-province="---- 选择省 ----"></select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="sr-only" for="city2">City</label>
+                                                        <select class="form-control" id="city2" data-city="---- 选择市 ----"></select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="sr-only" for="district2">District</label>
+                                                        <select class="form-control" id="district2" data-district="---- 选择区 ----"></select>
+                                                    </div>
+                                                </div>
                                                 <input type="text" class="setting-address" placeholder="详细地址">
                                             </div>
                                         </li>
@@ -380,6 +395,8 @@
         </div>
     </div>
     <!--弹出层 end-->
+    <script src="../js/distpicker.data.js"></script>
+    <script src="../js/distpicker.js"></script>
     <script src="../js/jquery.main.js"></script>
 </body>
 </html>
