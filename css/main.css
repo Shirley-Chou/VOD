@@ -7,18 +7,167 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
     outline: 0;
     vertical-align: baseline;
     background: transparent;
-    font-family: '微软雅黑', "Microsoft YaHei", "arial";
 }
 div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
     font-size: 100%;
 }
-input {
-    font-family: '微软雅黑', "Microsoft YaHei", "arial";
+article, aside, address, details, dialog, figure, figcaption, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+nav ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+ins {
+    background-color: #ff9;
+    color: #000;
+    text-decoration: none;
+}
+mark {
+    background-color: #ff9;
+    color: #000;
+    font-style: italic;
+    font-weight: bold;
+}
+del {
+    text-decoration: line-through;
+}
+abbr[title], dfn[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+input, select {
+    vertical-align: middle;
+}
+caption, th {
+    text-align: left;
+    font-weight: normal;
+}
+html, body, fieldset, img, iframe, abbr {
+    border: 0;
+}
+i, cite, em, var, address, dfn {
+    font-style: normal;
+}
+[hidefocus], summary {
+    outline: 0;
+}
+li {
+    list-style: none;
+}
+h1, h2, h3, h4, h5, h6, small {
+    font-size: 100%;
+}
+sup, sub {
+    font-size: 83%;
+}
+pre, code, kbd, samp {
+    font-family: inherit;
+}
+q:before, q:after {
+    content: none;
+}
+textarea {
+    overflow: auto;
+    resize: none;
+}
+label, summary {
+    cursor: default;
+}
+a, button {
+    cursor: pointer;
+}
+h1, h2, h3, h4, h5, h6, em, strong, b {
+    font-weight: normal;
+}
+del, ins, u, s, a, a:hover {
+    text-decoration: none;
+}
+body {
+    background: #fff;
+}
+a, a:hover {
+    color: #333;
+}
+*, html, body {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+}
+body {
+    box-sizing: content-box;
+    font-weight: lighter;
+    font-family: 'Microsoft YaHei', 'Microsoft YaHei UI Light', "微软雅黑", "宋体", Arial, Verdana, Helvetica, Tahoma, Arial, SimSun, STXihei, "华文细黑", Heiti, "黑体", sans-serif;
+    line-height: 1.14;
+}
+img {
+    display: inline;
+    border: none;
+    -ms-interpolation-mode: bicubic;
+}
+ul li {
+    list-style-type: none;
     border: none;
 }
 table {
     border-collapse: collapse;
     border-spacing: 0;
+}
+input, textarea {
+    border: none;
+}
+textarea {
+    resize: none;
+}
+a {
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+}
+input, button, select, textarea, a {
+    outline: none;
+}
+a {
+    blr: expression(this.onFocus=this.close());
+    blr: expression(this.onFocus=this.blur());
+}
+a:focus {
+    -moz-outline-style: none;
+    outline: none;
 }
 .fl {
     float: left;
@@ -45,6 +194,14 @@ table {
 }
 .clear {
     clear: both;
+    height: 0;
+    font-size: 0;
+}
+.yahei {
+    font-family: 'Microsoft YaHei';
+}
+.songti {
+    font-family: '宋体';
 }
 .block {
     display: block;
@@ -64,8 +221,6 @@ table {
 .orange {
     color: #f00;
 }
-.left { float: left; }
-.right { float: right; }
 /*****************************************公共样式*****************************************/
 html, body {
     width: 100% !important;
@@ -1641,19 +1796,19 @@ html, body {
     background: url("../images/message_clock.png") no-repeat left center;
 }
 /*****************************************个人设置*****************************************/
-.settingmain{
+.settingmain {
     padding-bottom: 300px;
 }
 .setting-tabtitle {
-    width: 173px;
+    width: 174px;
 }
 .setting-tabbox {
+    position: relative;
     padding-left: 74px;
     padding-top: 80px;
 }
 .setting-msg {
-    width: 395px;
-    margin-right: 126px
+    width: 100%;
 }
 .setting-msg li {
     margin-bottom: 20px;
@@ -1675,6 +1830,7 @@ html, body {
     width: 309px;
     height: 36px;
     text-indent: 15px;
+    font-size: 14px;
     color: #fff;
     border: 1px solid #7e83a6;
     border-radius: 5px;
@@ -1709,6 +1865,23 @@ input:-ms-input-placeholder {
     left: 0;
     top: 5px;
     visibility: hidden;
+}
+.distpicker{
+    margin-bottom: 20px;
+}
+.distpicker .form-group{
+    float: left;
+}
+.distpicker .form-group .sr-only {
+    display: none;
+}
+.distpicker .form-group .form-control{
+    height: 36px;
+    margin-right: 9px;
+    color: #7e83a6;
+    border: 1px solid #7e83a6;
+    border-radius: 5px;
+    background-color: #232333;
 }
 .setting-select {
     position: relative;
@@ -1774,6 +1947,9 @@ input:-ms-input-placeholder {
     float: left;
 }
 .setting-photo {
+    position: absolute;
+    top: 80px;
+    right: 100px;
     width: 111px;
 }
 .setting-photo .setting-photobox {
@@ -1783,7 +1959,7 @@ input:-ms-input-placeholder {
     margin-bottom: 19px;
     border-radius: 100%;
 }
-.setting-photo .setting-photobg{
+.setting-photo .setting-photobg {
     display: block;
     position: absolute;
     top: 0;

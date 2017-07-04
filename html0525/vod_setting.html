@@ -14,7 +14,7 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="../css/layui.css">
     <link rel="stylesheet" href="../css/ibanner.css">
-    <link href="http://www.jq22.com/jquery/bootstrap-3.3.4.css" rel="stylesheet">
+    <!--<link href="http://www.jq22.com/jquery/bootstrap-3.3.4.css" rel="stylesheet">-->
     <link rel="stylesheet" href="../css/main.css">
     <script src="../js/layui.js"></script>
     <script src="../js/jquery-1.11.1.min.js"></script>
@@ -161,125 +161,124 @@
             <div class="subbox settingmain">
                 <div class="setting-tab">
                     <div class="setting-tabtitle clearfix">
-                        <span class="setting-tabtitle-active">基本设置</span>
-                        <span>安全设置</span>
+                        <span class="setting-tabtitle-active">基本设置</span> <span>安全设置</span>
                     </div>
                     <div class="setting-tabmain">
                         <form class="setting-tabbox">
-                            <div class="clearfix">
-                                <div class="setting-msg fl">
-                                    <ul>
-                                        <li class="clearfix">
-                                            <span class="setting-msgtitle fl">昵称</span>
-                                            <div class="setting-msgcon fl">
-                                                <input type="text" class="setting-name">
-                                            </div>
-                                        </li>
-                                        <li class="clearfix">
-                                            <span class="setting-msgtitle fl">性别</span>
-                                            <div class="setting-msgcon fl clearfix">
-                                                <label name="sex" class="setting-sexradio">
-                                                    <input type="radio" name="sex" class="setting-sexinput">男
-                                                </label>
-                                                <label name="sex" class="setting-sexradio setting-sexradio-checked">
-                                                    <input type="radio" name="sex" checked="checked" class="setting-sexinput">女
-                                                </label>
-                                            </div>
-                                        </li>
-                                        <li class="clearfix">
-                                            <span class="setting-msgtitle fl">所在地</span>
-                                            <div class="setting-msgcon fl">
-                                                <div data-toggle="distpicker">
-                                                    <div class="form-group">
-                                                        <label class="sr-only" for="province2">Province</label>
-                                                        <select class="form-control" id="province2" data-province="---- 选择省 ----"></select>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label class="sr-only" for="city2">City</label>
-                                                        <select class="form-control" id="city2" data-city="---- 选择市 ----"></select>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label class="sr-only" for="district2">District</label>
-                                                        <select class="form-control" id="district2" data-district="---- 选择区 ----"></select>
-                                                    </div>
+                            <div class="setting-msg">
+                                <ul>
+                                    <li class="clearfix">
+                                        <span class="setting-msgtitle fl">昵称</span>
+                                        <div class="setting-msgcon fl">
+                                            <input type="text" class="setting-name">
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <span class="setting-msgtitle fl">性别</span>
+                                        <div class="setting-msgcon fl clearfix">
+                                            <label name="sex" class="setting-sexradio">
+                                                <input type="radio" name="sex" class="setting-sexinput">
+                                                男
+                                            </label>
+                                            <label name="sex" class="setting-sexradio setting-sexradio-checked">
+                                                <input type="radio" name="sex" checked="checked" class="setting-sexinput">
+                                                女
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <span class="setting-msgtitle fl">所在地</span>
+                                        <div class="setting-msgcon fl">
+                                            <div data-toggle="distpicker" class="distpicker clearfix">
+                                                <div class="form-group">
+                                                    <label class="sr-only">Province</label>
+                                                    <select class="form-control" data-province="四川省"></select>
                                                 </div>
-                                                <input type="text" class="setting-address" placeholder="详细地址">
-                                            </div>
-                                        </li>
-                                        <li class="clearfix">
-                                            <span class="setting-msgtitle fl">生日</span>
-                                            <div class="setting-msgcon fl clearfix">
-                                                <div class="setting-select setting-birth fl">
-                                                    <span>请选择</span>
-                                                    <ul>
-                                                        <li>2010年</li>
-                                                        <li>2011年</li>
-                                                        <li>2012年</li>
-                                                        <li>2013年</li>
-                                                        <li>2014年</li>
-                                                        <li>2015年</li>
-                                                        <li>2016年</li>
-                                                    </ul>
+                                                <div class="form-group">
+                                                    <label class="sr-only">City</label>
+                                                    <select class="form-control" data-city="成都市"></select>
                                                 </div>
-                                                <div class="setting-select setting-birth fl">
-                                                    <span>请选择</span>
-                                                    <ul>
-                                                        <li>1月</li>
-                                                        <li>2月</li>
-                                                        <li>3月</li>
-                                                        <li>4月</li>
-                                                        <li>5月</li>
-                                                        <li>6月</li>
-                                                        <li>7月</li>
-                                                        <li>8月</li>
-                                                        <li>9月</li>
-                                                        <li>10月</li>
-                                                        <li>11月</li>
-                                                        <li>12月</li>
-                                                    </ul>
+                                                <div class="form-group">
+                                                    <label class="sr-only">District</label>
+                                                    <select class="form-control" data-district="高新区"></select>
                                                 </div>
                                             </div>
-                                        </li>
-                                        <li class="clearfix">
-                                            <span class="setting-msgtitle fl">职业</span>
-                                            <div class="setting-msgcon fl clearfix">
-                                                <div class="setting-select setting-work fl">
-                                                    <span>请选择</span>
-                                                    <ul>
-                                                        <li>会计</li>
-                                                        <li>建筑监理工程师</li>
-                                                        <li>web前端开发工程师</li>
-                                                        <li>php工程师</li>
-                                                        <li>翻译</li>
-                                                        <li>翻译</li>
-                                                        <li>学生</li>
-                                                    </ul>
-                                                </div>
+                                            <input type="text" class="setting-address" placeholder="详细地址">
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <span class="setting-msgtitle fl">生日</span>
+                                        <div class="setting-msgcon fl clearfix">
+                                            <div class="setting-select setting-birth fl">
+                                                <span>请选择</span>
+                                                <ul>
+                                                    <li>2010年</li>
+                                                    <li>2011年</li>
+                                                    <li>2012年</li>
+                                                    <li>2013年</li>
+                                                    <li>2014年</li>
+                                                    <li>2015年</li>
+                                                    <li>2016年</li>
+                                                </ul>
                                             </div>
-                                        </li>
-                                        <li class="clearfix">
-                                            <span class="setting-msgtitle fl">兴趣爱好</span>
-                                            <div class="setting-msgcon fl">
-                                                <input type="text" placeholder="请输入文字">
-                                                <div class="setting-keyword clearfix">
-                                                    <a href="javascript:void(0)">音乐</a>
-                                                    <a href="javascript:void(0)">跳舞</a>
-                                                    <a href="javascript:void(0)">关键词</a>
-                                                </div>
+                                            <div class="setting-select setting-birth fl">
+                                                <span>请选择</span>
+                                                <ul>
+                                                    <li>1月</li>
+                                                    <li>2月</li>
+                                                    <li>3月</li>
+                                                    <li>4月</li>
+                                                    <li>5月</li>
+                                                    <li>6月</li>
+                                                    <li>7月</li>
+                                                    <li>8月</li>
+                                                    <li>9月</li>
+                                                    <li>10月</li>
+                                                    <li>11月</li>
+                                                    <li>12月</li>
+                                                </ul>
                                             </div>
-                                        </li>
-                                    </ul>
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <span class="setting-msgtitle fl">职业</span>
+                                        <div class="setting-msgcon fl clearfix">
+                                            <div class="setting-select setting-work fl">
+                                                <span>请选择</span>
+                                                <ul>
+                                                    <li>会计</li>
+                                                    <li>建筑监理工程师</li>
+                                                    <li>web前端开发工程师</li>
+                                                    <li>php工程师</li>
+                                                    <li>翻译</li>
+                                                    <li>翻译</li>
+                                                    <li>学生</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <span class="setting-msgtitle fl">兴趣爱好</span>
+                                        <div class="setting-msgcon fl">
+                                            <input type="text" placeholder="请输入文字">
+                                            <div class="setting-keyword clearfix">
+                                                <a href="javascript:void(0)">音乐</a>
+                                                <a href="javascript:void(0)">跳舞</a>
+                                                <a href="javascript:void(0)">关键词</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="setting-photo">
+                                <div class="setting-photobox">
+                                    <img src="../images/temp/setting_photo.png">
+                                    <span class="setting-photobg"></span>
                                 </div>
-                                <div class="setting-photo fl">
-                                    <div class="setting-photobox">
-                                        <img src="../images/temp/setting_photo.png">
-                                        <span class="setting-photobg"></span>
-                                    </div>
-                                    <a href="javascript:void(0)" class="setting-changephoto">
-                                        修改头像
-                                        <input type="file" name="changePhoto">
-                                    </a>
-                                </div>
+                                <a href="javascript:void(0)" class="setting-changephoto">
+                                    修改头像
+                                    <input type="file" name="changePhoto">
+                                </a>
                             </div>
                             <input type="button" class="setting-save" id="basicSave" value="保存">
                         </form>
@@ -349,8 +348,7 @@
                 <a class="vodpop-closebtn lrpop-closebtn"></a>
                 <div class="lrpop-tab">
                     <div class="lrpop-tabtitle clearfix">
-                        <span class="fl lrpop-tabcurrent">账户登录</span>
-                        <span class="fl">立即注册</span>
+                        <span class="fl lrpop-tabcurrent">账户登录</span> <span class="fl">立即注册</span>
                     </div>
                     <div class="lrpop-tabmain">
                         <form class="lrpop-form loginpop-form">
