@@ -1878,6 +1878,7 @@ input:-ms-input-placeholder {
 .distpicker .form-group .form-control{
     height: 36px;
     margin-right: 9px;
+    font: 14px 'Microsoft YaHei';
     color: #7e83a6;
     border: 1px solid #7e83a6;
     border-radius: 5px;
@@ -1945,6 +1946,11 @@ input:-ms-input-placeholder {
     border: 1px solid #7e83a6;
     border-radius: 26px;
     float: left;
+}
+.setting-keyword a.setting-keyword-checked{
+    color: #ff0000;
+    border: 1px solid #fff;
+    background-color: #fff;
 }
 .setting-photo {
     position: absolute;

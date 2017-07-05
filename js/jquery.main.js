@@ -48,7 +48,6 @@ function playVideo(){
         $('.playvideo-qxd').show();
     }
 };
-
 //播放记录
 function history(){
     $('.submain-header-check').bind('click', function(){
@@ -59,12 +58,10 @@ function history(){
         }
     });
 };
-
 //我的收藏
 function collect(){
     tabBar($('.collect-tab-title span'), 'collect-tab-titleactive', 'span', $('.collect-tab-list'), 'div');
 }
-
 //我的消息
 function message(){
     $('.message-list-openbtn').bind('click', function(){
@@ -84,28 +81,38 @@ function message(){
 
     tabBar($('.message-tabtitle span'), 'message-tabtitle-active', 'span', $('.message-tablist'), 'div');
 }
-
 //个人设置
 function setting(){
     $('.setting-sexradio').bind('click', function(){
-        $()
-        if($('#pop-remember').is(':checked')){
-            $(this).children('.loginpop-remember-checkbox').addClass('loginpop-remember-checked');
-        } else {
-            $(this).children('.loginpop-remember-checkbox').removeClass('loginpop-remember-checked');
+        if($(this).children('.setting-sexinput').is(':checked')){
+            $(this).addClass('setting-sexradio-checked').siblings('label').removeClass('setting-sexradio-checked');
         }
     });
     $('.setting-select').bind('click', function(){
         $(this).children('ul').toggle();
     });
-    $('.setting-select ul li').bind('click',function(){
-        var val=$(this).html();
+    $('.setting-select ul li').bind('click', function(){
+        var val = $(this).html();
         $(this).parent('ul').siblings('span').html(val);
         $(this).addClass('setting-select-choose').siblings().removeClass();
     });
+
+    $('.setting-keyword a').bind('click', function(){
+        var dataKey = $(this).attr('data-key'),
+            keywordVal = $(this).html(),
+            keywordInputVal = $('#keyword').val();
+        $(this).toggleClass('setting-keyword-checked').attr('data-key', '1');
+        if($(this).hasClass('setting-keyword-checked') && dataKey == 0){
+            if(keywordInputVal != null && keywordInputVal != ''){
+                $('#keyword').val(keywordInputVal + ',' + keywordVal);
+            } else {
+                $('#keyword').val(keywordVal);
+            }
+        }
+    });
 }
 
-function tabBar(tabEleBtn, tabClass, tabEleBtnSib, tabEle, tabEleSib){
+var tabBar = function(tabEleBtn, tabClass, tabEleBtnSib, tabEle, tabEleSib){
     tabEleBtn.bind('click', function(){
         var i = $(this).index();
         $(this).addClass(tabClass).siblings(tabEleBtnSib).removeClass(tabClass);
