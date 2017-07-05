@@ -1866,16 +1866,16 @@ input:-ms-input-placeholder {
     top: 5px;
     visibility: hidden;
 }
-.distpicker{
+.distpicker {
     margin-bottom: 20px;
 }
-.distpicker .form-group{
+.distpicker .form-group {
     float: left;
 }
 .distpicker .form-group .sr-only {
     display: none;
 }
-.distpicker .form-group .form-control{
+.distpicker .form-group .form-control {
     height: 36px;
     margin-right: 9px;
     font: 14px 'Microsoft YaHei';
@@ -1947,8 +1947,8 @@ input:-ms-input-placeholder {
     border-radius: 26px;
     float: left;
 }
-.setting-keyword a.setting-keyword-checked{
-    color: #ff0000;
+.setting-keyword a.setting-keyword-checked {
+    color: #f00;
     border: 1px solid #fff;
     background-color: #fff;
 }
@@ -2014,4 +2014,70 @@ input:-ms-input-placeholder {
     background-color: rgb(255, 0, 0);
     cursor: pointer;
 }
-/*****************************************个人设置*****************************************/
+/*****************************************图片详情*****************************************/
+.pic-subcontainer {
+    padding-top: 38px;
+}
+.pic-menu {
+    width: 15.4%;
+    min-width: 154px;
+}
+.pic-menu li {
+    width: 100%;
+    height: 52px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 52px;
+    background: #232333 url("../images/picture_menu_icon.png") no-repeat 80% center;
+}
+.pic-menu li a {
+    display: block;
+    height: 52px;
+    padding-left: 11%;
+    color: #7e83a6;
+}
+.pic-menu li.pic-menu-active {
+    background: #f00 url("../images/picture_menu_icon2.png") no-repeat 80% center;
+}
+.pic-menu li.pic-menu-active a {
+    color: #fff;
+}
+.pic-submain {
+    width: 81%;
+    min-width: 809px;
+    background-color: #111119;
+}
+.pic-top {
+    width: 100%;
+    height: 39px;
+}
+.pic-top h2 {
+    margin-right: 20px;
+    font-size: 24px;
+    color: #ffd800;
+    float: left;
+}
+.pic-thumb {
+    font-size: 14px;
+    color: #7e83a6;
+    line-height: 27px;
+}
+.pic-thumb a {
+    color: #7e83a6;
+}
+.pic-thumb .pic-thumb-active {
+    color: #fff;
+}
+.pic-list { }
+.pic-list ul {
+    margin-left: -2%;
+}
+.pic-list ul .pic-list-item {
+    width: 31.3%;
+    min-width: 257px;
+    margin-left: 2%;
+    margin-bottom: 2%;
+    background-color: #33364b;
+    float: left;
+}
+.pic-list-item { }

@@ -2,7 +2,7 @@
  * Created by Shirley on 2017/6/23.
  */
 //登录注册弹窗
-function lrPop(){
+var lrPop = function(){
     $('#headerLoginbtn').bind('click', function(){
         $('.vodpop').show();
         $('.lrpop-tabtitle span').eq(0).addClass('lrpop-tabcurrent').siblings().removeClass('lrpop-tabcurrent');
@@ -16,9 +16,6 @@ function lrPop(){
     $('.lrpop-closebtn').bind('click', function(){
         $('.vodpop,.lrpop-form').hide();
     });
-
-    tabBar($('.lrpop-tabtitle span'), 'lrpop-tabcurrent', 'span', $('.lrpop-form'), 'form');
-
     $('.loginpop-remember-check').bind('click', function(){
         if($('#pop-remember').is(':checked')){
             $(this).children('.loginpop-remember-checkbox').addClass('loginpop-remember-checked');
@@ -26,9 +23,12 @@ function lrPop(){
             $(this).children('.loginpop-remember-checkbox').removeClass('loginpop-remember-checked');
         }
     });
+
+    tabBar($('.lrpop-tabtitle span'), 'lrpop-tabcurrent', 'span', $('.lrpop-form'), 'form');
 };
 
-function menu(){
+//菜单
+var Menu = function(){
     var boxH1 = Math.round($('.submain').outerHeight()), boxH2 = Math.round($('.menu-usermsg').outerHeight() + 4), boxH = boxH1 - boxH2;
     $('.menu-container').height(boxH);
 
@@ -36,9 +36,10 @@ function menu(){
         var boxH1 = Math.round($('.submain').outerHeight()), boxH2 = Math.round($('.menu-usermsg').outerHeight() + 4), boxH = boxH1 - boxH2;
         $('.menu-container').height(boxH);
     });
-}
+};
+
 //播放视频
-function playVideo(){
+var PlayVideo = function(){
     var percent = $('.playvideo-viewpercent-num').html();
     $('.playvideo-viewpercent-line').css('width', percent);
 
@@ -48,8 +49,9 @@ function playVideo(){
         $('.playvideo-qxd').show();
     }
 };
+
 //播放记录
-function history(){
+var History = function(){
     $('.submain-header-check').bind('click', function(){
         if($('#subHeardCheck').is(':checked')){
             $(this).children('.submain-header-checkbox').addClass('submain-header-checked');
@@ -58,12 +60,14 @@ function history(){
         }
     });
 };
+
 //我的收藏
-function collect(){
+var Collect = function(){
     tabBar($('.collect-tab-title span'), 'collect-tab-titleactive', 'span', $('.collect-tab-list'), 'div');
-}
+};
+
 //我的消息
-function message(){
+var Message = function(){
     $('.message-list-openbtn').bind('click', function(){
         var read = $(this).parents('.message-list-item');
         $(this).toggleClass('message-list-closebtn');
@@ -80,9 +84,10 @@ function message(){
     });
 
     tabBar($('.message-tabtitle span'), 'message-tabtitle-active', 'span', $('.message-tablist'), 'div');
-}
+};
+
 //个人设置
-function setting(){
+var Setting = function(){
     $('.setting-sexradio').bind('click', function(){
         if($(this).children('.setting-sexinput').is(':checked')){
             $(this).addClass('setting-sexradio-checked').siblings('label').removeClass('setting-sexradio-checked');
@@ -110,7 +115,7 @@ function setting(){
             }
         }
     });
-}
+};
 
 var tabBar = function(tabEleBtn, tabClass, tabEleBtnSib, tabEle, tabEleSib){
     tabEleBtn.bind('click', function(){
@@ -122,10 +127,10 @@ var tabBar = function(tabEleBtn, tabClass, tabEleBtnSib, tabEle, tabEleSib){
 
 $(function(){
     lrPop();
-    playVideo();
-    menu();
-    history();
-    collect();
-    message();
-    setting();
+    Menu();
+    PlayVideo();
+    History();
+    Collect();
+    Message();
+    Setting();
 });
