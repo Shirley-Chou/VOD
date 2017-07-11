@@ -2092,6 +2092,10 @@ input:-ms-input-placeholder {
     position: absolute;
     top: 0;
     left: 0;
+    display: none;
+}
+.pic-banner-item:first-child{
+    display: block;
 }
 .pic-banner-item a {
     display: block;

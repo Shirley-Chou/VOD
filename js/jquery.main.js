@@ -117,6 +117,53 @@ var Setting = function(){
     });
 };
 
+//图片展示
+var Picture = function(){
+    var PicTotal = $(".pic-banner-item").length;   // 当前图片总数
+
+    if(PicTotal > 0){
+        var index = 0, interval = 0, timer;  //  interval为计时器
+
+        function showSys(){   // 自动切换函数
+            interval++;
+            if(interval >= 4){    //在计时器为4秒的时候，图片切换，计时器清零
+                index++;
+                interval = 0;
+                changeBanner(index);
+                if(index >= PicTotal - 1){
+                    index = -1;
+                }
+            }
+        };
+
+        timer = window.setInterval(showSys, 1000);
+
+        //左右切换按钮
+        $(".pic-prevbtn").click(function(){
+            index--;
+            interval = 0;
+            changeBanner(index);
+            if(index == -1){
+                index = PicTotal - 1;
+            }
+        });
+
+        $(".pic-nextbtn").click(function(){
+            index++;
+            interval = 0;
+            changeBanner(index);
+            if(index >= PicTotal - 1){
+                index = -1;
+            }
+        });
+    }
+};
+// 图片切换函数
+var changeBanner = function(Num){
+    var Pic = $(".pic-banner-item");
+    Pic.eq(Num).stop(false, true).fadeIn(1500).siblings("li").stop(false, true).fadeOut(1500);// 所有图片隐藏，索引为Num的显示
+};
+
 var tabBar = function(tabEleBtn, tabClass, tabEleBtnSib, tabEle, tabEleSib){
     tabEleBtn.bind('click', function(){
         var i = $(this).index();
@@ -133,4 +180,5 @@ $(function(){
     Collect();
     Message();
     Setting();
+    Picture();
 });
