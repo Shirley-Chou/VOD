@@ -2094,7 +2094,7 @@ input:-ms-input-placeholder {
     left: 0;
     display: none;
 }
-.pic-banner-item:first-child{
+.pic-banner-item:first-child {
     display: block;
 }
 .pic-banner-item a {
@@ -2209,4 +2209,236 @@ input:-ms-input-placeholder {
 }
 .pic-list-txtbox > p {
     line-height: 24px;
+}
+/*****************************************镜像文件*****************************************/
+.vod-mirror {
+    position: relative;
+}
+.mirrorone {
+    width: 100%;
+    background: url("../images/mirrorone_bg.jpg") no-repeat center top;
+}
+.mirror-title {
+    width: 210px;
+    margin: 0 auto;
+    height: 158px;
+}
+.mirror-title h1 {
+    padding-top: 108px;
+    font-size: 24px;
+    text-align: center;
+    color: #ffd800;
+    background: url("../images/mirror_logo.png") no-repeat center 19px;
+}
+.mirrorone .mirror-main {
+    width: 100%;
+    height: 712px;
+    background: url("../images/mirror_mainbg.png") repeat;
+}
+.mirrorone .mirror-box {
+    width: 1198px;
+    margin: 0 auto;
+    padding-top: 109px;
+}
+.mirrorone .mirror-box ul {
+    margin-left: -44px;
+}
+.mirrorone .mirror-box-item {
+    position: relative;
+    width: 370px;
+    height: 84px;
+    margin-left: 44px;
+    margin-bottom: 53px;
+    text-align: center;
+    color: #fff;
+    float: left;
+    cursor: pointer;
+}
+.mirrorone .mirror-box-itemtxt {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 368px;
+    height: 82px;
+    font-size: 16px;
+    line-height: 82px;
+    border: 1px solid #fff;
+    background-color: #090203;
+    z-index: 1;
+}
+.mirrorone .mirror-box-item a {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 370px;
+    height: 64px;
+    padding-top: 20px;
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.4;
+    background-color: #f00;
+    z-index: 2;
+    opacity: 0;
+}
+.mirrorone .mirror-box-item a i {
+    display: block;
+    font-size: 14px;
+}
+.mirrorone .mirror-box-item:hover a {
+    opacity: 1;
+}
+.mirror-footer {
+    height: 170px;
+    padding-top: 38px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 2;
+    color: #fff;
+}
+.mirrortwo {
+    width: 100%;
+    min-width: 1200px;
+    height: 1080px;
+    background: url("../images/mirrortwo_bg.jpg") no-repeat center top;
+}
+.mirrortwo .mirror-title {
+    position: absolute;
+    top: 368px;
+    left: 50%;
+    margin-left: -105px;
+}
+.mirrortwo .mirror-main {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+}
+.mirrortwo-item {
+    position: absolute;
+    width: 322px;
+    height: 73px;
+}
+.mirrortwo-item a {
+    display: block;
+    position: relative;
+    width: 306px;
+    height: 55px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 55px;
+    color: #fff;
+}
+.mirrortwo-item a .mirrortwo-itembg {
+    position: absolute;
+    left: -9px;
+    top: -8px;
+    width: 322px;
+    height: 73px;
+    opacity: 0;
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+}
+.mirrortwo-item a:hover .mirrortwo-itembg {
+    opacity: 1;
+}
+.mirrortwo-item span {
+    position: relative;
+    display: block;
+    width: 306px;
+    height: 55px;
+    color: #fff;
+    z-index: 9;
+}
+.blue span {
+    background: url("../images/blue.png") no-repeat;
+}
+.gray span {
+    background: url("../images/gray.png") no-repeat;
+}
+.green span {
+    background: url("../images/green.png") no-repeat;
+}
+.red span {
+    background: url("../images/red.png") no-repeat;
+}
+.mirrortwo-item1 {
+    top: 124px;
+    left: 148px;
+}
+.mirrortwo-item2 {
+    top: 196px;
+    left: 79px;
+}
+.mirrortwo-item3 {
+    top: 278px;
+    left: 28px;
+}
+.mirrortwo-item4 {
+    top: 377px;
+    left: 8px;
+}
+.mirrortwo-item5 {
+    top: 485px;
+    left: -10px;
+}
+.mirrortwo-item6 {
+    top: 586px;
+    left: 41px;
+}
+.mirrortwo-item7 {
+    top: 691px;
+    left: 125px;
+}
+.mirrortwo-item8 {
+    top: 776px;
+    left: 172px;
+}
+.mirrortwo-item9 {
+    top: 803px;
+    left: 520px;
+}
+.mirrortwo-item10 {
+    top: 715px;
+    left: 460px;
+}
+.mirrortwo-item11 {
+    top: 715px;
+    right: 86px;
+}
+.mirrortwo-item12 {
+    top: 623px;
+    right: 23px;
+}
+.mirrortwo-item13 {
+    top: 529px;
+    right: 36px;
+}
+.mirrortwo-item14 {
+    top: 425px;
+    right: -17px;
+}
+.mirrortwo-item15 {
+    top: 322px;
+    right: -17px;
+}
+.mirrortwo-item16 {
+    top: 219px;
+    right: 21px;
+}
+.mirrortwo-item17 {
+    top: 116px;
+    right: 84px;
+}
+.mirrortwo-item18 {
+    top: 58px;
+    right: 409px;
+}
+.mirrortwo-item19 {
+    top: 163px;
+    left: 465px;
+}
+.mirrortwo .mirror-footer{
+    padding-top:910px;
 }
